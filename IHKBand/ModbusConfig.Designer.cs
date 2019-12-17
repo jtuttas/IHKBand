@@ -75,6 +75,7 @@
             // 
             // inputCoilTextBox
             // 
+            this.inputCoilTextBox.Enabled = false;
             this.inputCoilTextBox.Location = new System.Drawing.Point(189, 123);
             this.inputCoilTextBox.Name = "inputCoilTextBox";
             this.inputCoilTextBox.Size = new System.Drawing.Size(66, 31);
@@ -125,6 +126,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 271);
+            this.ControlBox = false;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

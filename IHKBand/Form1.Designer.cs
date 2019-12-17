@@ -52,22 +52,10 @@
             this.mKap = new System.Windows.Forms.ToolStripMenuItem();
             this.steuerungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mverbinden = new System.Windows.Forms.ToolStripMenuItem();
+            this.verbindungsConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mabout = new System.Windows.Forms.ToolStripMenuItem();
             this.prozessPanel = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.motorpictureBox = new System.Windows.Forms.PictureBox();
-            this.bedienpanel = new System.Windows.Forms.Panel();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.verbindungsConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notAus1 = new WindowsFormsApplication1.NotAus();
             this.holz1 = new WindowsFormsApplication1.Holz();
             this.metall3 = new WindowsFormsApplication1.Metall();
@@ -78,6 +66,10 @@
             this.rutsche2 = new WindowsFormsApplication1.Rutsche();
             this.band1 = new WindowsFormsApplication1.Band();
             this.magazin2 = new WindowsFormsApplication1.Magazin();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.motorpictureBox = new System.Windows.Forms.PictureBox();
+            this.bedienpanel = new System.Windows.Forms.Panel();
             this.bedienelement11 = new WindowsFormsApplication1.Bedienelement();
             this.bedienelement12 = new WindowsFormsApplication1.Bedienelement();
             this.bedienelement13 = new WindowsFormsApplication1.Bedienelement();
@@ -100,6 +92,14 @@
             this.bedienelement1 = new WindowsFormsApplication1.Bedienelement();
             this.segment72 = new WindowsFormsApplication1.Segment7();
             this.segment71 = new WindowsFormsApplication1.Segment7();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.prozessPanel.SuspendLayout();
@@ -313,6 +313,14 @@
             this.mverbinden.Text = "Verbinden";
             this.mverbinden.Click += new System.EventHandler(this.mverbinden_Click);
             // 
+            // verbindungsConfigToolStripMenuItem
+            // 
+            this.verbindungsConfigToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("verbindungsConfigToolStripMenuItem.Image")));
+            this.verbindungsConfigToolStripMenuItem.Name = "verbindungsConfigToolStripMenuItem";
+            this.verbindungsConfigToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verbindungsConfigToolStripMenuItem.Text = "Verbindungs Config";
+            this.verbindungsConfigToolStripMenuItem.Click += new System.EventHandler(this.verbindungsConfigToolStripMenuItem_Click);
+            // 
             // hilfeToolStripMenuItem
             // 
             this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -344,166 +352,10 @@
             this.prozessPanel.Controls.Add(this.band1);
             this.prozessPanel.Controls.Add(this.magazin2);
             this.prozessPanel.Location = new System.Drawing.Point(6, 352);
-            this.prozessPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.prozessPanel.Margin = new System.Windows.Forms.Padding(6);
             this.prozessPanel.Name = "prozessPanel";
             this.prozessPanel.Size = new System.Drawing.Size(1060, 392);
             this.prozessPanel.TabIndex = 48;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 52);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1274, 802);
-            this.tabControl1.TabIndex = 49;
-            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage1.Controls.Add(this.motorpictureBox);
-            this.tabPage1.Controls.Add(this.prozessPanel);
-            this.tabPage1.Controls.Add(this.bedienpanel);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabPage1.Size = new System.Drawing.Size(1266, 764);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Modell";
-            // 
-            // motorpictureBox
-            // 
-            this.motorpictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.motorpictureBox.Image = ((System.Drawing.Image)(resources.GetObject("motorpictureBox.Image")));
-            this.motorpictureBox.Location = new System.Drawing.Point(1080, 602);
-            this.motorpictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.motorpictureBox.Name = "motorpictureBox";
-            this.motorpictureBox.Size = new System.Drawing.Size(72, 72);
-            this.motorpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.motorpictureBox.TabIndex = 69;
-            this.motorpictureBox.TabStop = false;
-            // 
-            // bedienpanel
-            // 
-            this.bedienpanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.bedienpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.bedienpanel.Controls.Add(this.bedienelement11);
-            this.bedienpanel.Controls.Add(this.bedienelement12);
-            this.bedienpanel.Controls.Add(this.bedienelement13);
-            this.bedienpanel.Controls.Add(this.bedienelement14);
-            this.bedienpanel.Controls.Add(this.bedienelement15);
-            this.bedienpanel.Controls.Add(this.bedienelement16);
-            this.bedienpanel.Controls.Add(this.bedienelement17);
-            this.bedienpanel.Controls.Add(this.bedienelement18);
-            this.bedienpanel.Controls.Add(this.bedienelement19);
-            this.bedienpanel.Controls.Add(this.bedienelement20);
-            this.bedienpanel.Controls.Add(this.bedienelement10);
-            this.bedienpanel.Controls.Add(this.bedienelement9);
-            this.bedienpanel.Controls.Add(this.bedienelement8);
-            this.bedienpanel.Controls.Add(this.bedienelement7);
-            this.bedienpanel.Controls.Add(this.bedienelement6);
-            this.bedienpanel.Controls.Add(this.bedienelement5);
-            this.bedienpanel.Controls.Add(this.bedienelement4);
-            this.bedienpanel.Controls.Add(this.bedienelement3);
-            this.bedienpanel.Controls.Add(this.bedienelement2);
-            this.bedienpanel.Controls.Add(this.bedienelement1);
-            this.bedienpanel.Controls.Add(this.segment72);
-            this.bedienpanel.Controls.Add(this.segment71);
-            this.bedienpanel.Location = new System.Drawing.Point(0, 12);
-            this.bedienpanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.bedienpanel.Name = "bedienpanel";
-            this.bedienpanel.Size = new System.Drawing.Size(1244, 325);
-            this.bedienpanel.TabIndex = 45;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabPage2.Size = new System.Drawing.Size(1266, 764);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Signalzordnung";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(22, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 44);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "ToText";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(22, 67);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1224, 673);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "Betriebmittel";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 156;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "Adresse";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 116;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.HeaderText = "Komentar";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 129;
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.FileName = "project.eat";
-            this.saveFileDialog1.Filter = "EAT Projekt|*.eat";
-            this.saveFileDialog1.Title = "Save File";
-            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "EAT Projekt|*.eat";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
-            // 
-            // verbindungsConfigToolStripMenuItem
-            // 
-            this.verbindungsConfigToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("verbindungsConfigToolStripMenuItem.Image")));
-            this.verbindungsConfigToolStripMenuItem.Name = "verbindungsConfigToolStripMenuItem";
-            this.verbindungsConfigToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.verbindungsConfigToolStripMenuItem.Text = "Verbindungs Config";
-            this.verbindungsConfigToolStripMenuItem.Click += new System.EventHandler(this.verbindungsConfigToolStripMenuItem_Click);
             // 
             // notAus1
             // 
@@ -631,6 +483,76 @@
             this.magazin2.Name = "magazin2";
             this.magazin2.Size = new System.Drawing.Size(34, 52);
             this.magazin2.TabIndex = 67;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 52);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(6);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1274, 802);
+            this.tabControl1.TabIndex = 49;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.motorpictureBox);
+            this.tabPage1.Controls.Add(this.prozessPanel);
+            this.tabPage1.Controls.Add(this.bedienpanel);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(6);
+            this.tabPage1.Size = new System.Drawing.Size(1266, 764);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Modell";
+            // 
+            // motorpictureBox
+            // 
+            this.motorpictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.motorpictureBox.Image = ((System.Drawing.Image)(resources.GetObject("motorpictureBox.Image")));
+            this.motorpictureBox.Location = new System.Drawing.Point(1080, 602);
+            this.motorpictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.motorpictureBox.Name = "motorpictureBox";
+            this.motorpictureBox.Size = new System.Drawing.Size(72, 72);
+            this.motorpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.motorpictureBox.TabIndex = 69;
+            this.motorpictureBox.TabStop = false;
+            // 
+            // bedienpanel
+            // 
+            this.bedienpanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.bedienpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.bedienpanel.Controls.Add(this.bedienelement11);
+            this.bedienpanel.Controls.Add(this.bedienelement12);
+            this.bedienpanel.Controls.Add(this.bedienelement13);
+            this.bedienpanel.Controls.Add(this.bedienelement14);
+            this.bedienpanel.Controls.Add(this.bedienelement15);
+            this.bedienpanel.Controls.Add(this.bedienelement16);
+            this.bedienpanel.Controls.Add(this.bedienelement17);
+            this.bedienpanel.Controls.Add(this.bedienelement18);
+            this.bedienpanel.Controls.Add(this.bedienelement19);
+            this.bedienpanel.Controls.Add(this.bedienelement20);
+            this.bedienpanel.Controls.Add(this.bedienelement10);
+            this.bedienpanel.Controls.Add(this.bedienelement9);
+            this.bedienpanel.Controls.Add(this.bedienelement8);
+            this.bedienpanel.Controls.Add(this.bedienelement7);
+            this.bedienpanel.Controls.Add(this.bedienelement6);
+            this.bedienpanel.Controls.Add(this.bedienelement5);
+            this.bedienpanel.Controls.Add(this.bedienelement4);
+            this.bedienpanel.Controls.Add(this.bedienelement3);
+            this.bedienpanel.Controls.Add(this.bedienelement2);
+            this.bedienpanel.Controls.Add(this.bedienelement1);
+            this.bedienpanel.Controls.Add(this.segment72);
+            this.bedienpanel.Controls.Add(this.segment71);
+            this.bedienpanel.Location = new System.Drawing.Point(0, 12);
+            this.bedienpanel.Margin = new System.Windows.Forms.Padding(6);
+            this.bedienpanel.Name = "bedienpanel";
+            this.bedienpanel.Size = new System.Drawing.Size(1244, 325);
+            this.bedienpanel.TabIndex = 45;
             // 
             // bedienelement11
             // 
@@ -848,6 +770,84 @@
             this.segment71.Size = new System.Drawing.Size(46, 69);
             this.segment71.TabIndex = 49;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(6);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(6);
+            this.tabPage2.Size = new System.Drawing.Size(1266, 764);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Signalzordnung";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(22, 12);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 44);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "ToText";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Location = new System.Drawing.Point(22, 67);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1224, 673);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "Betriebmittel";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 156;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.HeaderText = "Adresse";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 116;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.HeaderText = "Komentar";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 129;
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileName = "project.eat";
+            this.saveFileDialog1.Filter = "EAT Projekt|*.eat";
+            this.saveFileDialog1.Title = "Save File";
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "EAT Projekt|*.eat";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -861,13 +861,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Aktorikmodell Sortieranlage V1.3(c) 2010 by Dr. Jörg Tuttas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);

@@ -14,15 +14,15 @@ namespace WindowsFormsApplication1
     class IOServerModbus : IOServer
     {
 
-        private bool[] coil_input;
-        private bool[] coil_output;
+        private bool[] coil_input = new bool[48];
+        private bool[] coil_output = new bool[48];
         
         ModbusIpMaster master;
         TcpClient client;
         String ipadr="127.0.0.1";
         int ipport=502;
-        ushort offset;
-        ushort inputLength;
+        ushort offset=16;
+        ushort inputLength=48;
 
         /*
          * offset bildet den coil Offset und inputLenth die Anzahl der Ausgänge
@@ -31,14 +31,8 @@ namespace WindowsFormsApplication1
          *      auf Coil Adr 10, der Ausgang 0.0 befindet sich auf Coil Adr. 42 (Offset 10
          *      und 32 Eingänge)
          */
-        public IOServerModbus(String ipadr,int ipport,ushort offset,ushort inputLength)
+        public IOServerModbus()
         {
-            this.ipadr = ipadr;
-            this.ipport = ipport;
-            this.offset = offset;
-            this.inputLength = inputLength;
-            coil_input = new bool[inputLength];
-            coil_output = new bool[inputLength];
         }
 
         public override bool connect()
@@ -109,5 +103,21 @@ namespace WindowsFormsApplication1
             //Console.WriteLine(".. finished");
             return true;
         }
+
+        internal void setIpAdresse(string text)
+        {
+            this.ipadr = text;
+        }
+
+        internal void setPort(int v)
+        {
+            this.ipport = v;
+        }
+
+        internal void setCoilOffset(ushort v)
+        {
+            this.offset = v;
+        }
+
     }
 }

@@ -29,6 +29,9 @@ namespace WindowsFormsApplication1
 
         public Form1()
         {
+            
+            Ios = new IOServerModbus();
+            ios.setListener(this);
             titelName =  "Aktorikmodell Sortieranlage Version 1.4 (c) 2009/10/20 by Dr. Jörg Tuttas: ";
             form1 = this;
             this.InitializeComponent();
@@ -183,8 +186,9 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                Ios = new IOServerModbus(mc.ipTextBox.Text, Int32.Parse(mc.portTextBox.Text),ushort.Parse(mc.coilOffsetTextBox.Text), ushort.Parse(mc.inputCoilTextBox.Text));
-                Ios.setListener(this);
+                ios.setIpAdresse(mc.ipTextBox.Text);
+                Ios.setPort(Int32.Parse(mc.portTextBox.Text));
+                Ios.setCoilOffset(ushort.Parse(mc.coilOffsetTextBox.Text));
                 Boolean b = this.Ios.connect();
                 statusStrip1.BackColor = Color.Transparent;
                 if (b)
@@ -832,7 +836,14 @@ namespace WindowsFormsApplication1
             if (this.InvokeRequired)
             {
                 setLostConnectionCallback d = new setLostConnectionCallback(setLostConnection);
-                this.Invoke(d, new object[] { null });
+                try
+                {
+                    this.Invoke(d, new object[] { null });
+                }
+                catch (System.ComponentModel.InvalidAsynchronousStateException e)
+                {
+
+                }
             }
             else
             {
@@ -850,6 +861,7 @@ namespace WindowsFormsApplication1
             if (Ios!=null)
             {
                 Ios.remoteAllItems();
+
             }
             setLostConnection(null);
             
@@ -867,8 +879,19 @@ namespace WindowsFormsApplication1
 
         private void verbindungsConfigToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            mc.Location = new Point (this.Location.X + this.Width / 2 - mc.Width / 2,
+                                     this.Location.Y + this.Height/2 - mc.Height/2);
+
             mc.Show();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timer1.Stop();
+            if (Ios != null && Ios.isConnected())
+            {
+                Ios.disconnect();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
