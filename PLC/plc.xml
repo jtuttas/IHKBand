@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project xmlns:ns1="http://www.plcopen.org/xml/tc6.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.plcopen.org/xml/tc6_0201">
+  <fileHeader companyName="Unbekannt" productName="Unbenannt" productVersion="1" creationDateTime="2019-12-16T14:51:36"/>
+  <contentHeader name="Unbenannt" modificationDateTime="2019-12-16T15:39:37">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="10" y="10"/>
+      </fbd>
+      <ld>
+        <scaling x="10" y="10"/>
+      </ld>
+      <sfc>
+        <scaling x="10" y="10"/>
+      </sfc>
+    </coordinateInfo>
+  </contentHeader>
+  <types>
+    <dataTypes/>
+    <pous>
+      <pou name="program0" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="b5" address="%QX3.1">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[Ind. Näherungsschalter]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="b3" address="%QX3.0">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[Kap. Näherungsschalter]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="m1_links" address="%QX8.1">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="m1_rechts" address="%QX8.0">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Notaus_Freigabe" address="%QX3.3">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Notaus_Quittierung" address="%QX3.2">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="A_Zehner1" address="%QX10.4">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="A_Zehner2" address="%QX10.5">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="A_Zehner3" address="%QX10.6">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="A_Zehner4" address="%QX10.7">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="A_Einer0" address="%QX10.0">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="A_Einer1" address="%QX10.1">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="A_Einer2" address="%QX10.2">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="A_Einer3" address="%QX10.3">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <FBD>
+            <inVariable localId="1" executionOrderId="0" height="30" width="30" negated="false">
+              <position x="200" y="60"/>
+              <connectionPointOut>
+                <relPosition x="30" y="20"/>
+              </connectionPointOut>
+              <expression>b5</expression>
+            </inVariable>
+            <outVariable localId="3" executionOrderId="0" height="30" width="80" negated="false">
+              <position x="280" y="60"/>
+              <connectionPointIn>
+                <relPosition x="0" y="20"/>
+                <connection refLocalId="1">
+                  <position x="280" y="80"/>
+                  <position x="230" y="80"/>
+                </connection>
+              </connectionPointIn>
+              <expression>m1_links</expression>
+            </outVariable>
+          </FBD>
+        </body>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations>
+      <configuration name="Config0">
+        <resource name="Res0">
+          <task name="task0" priority="0" interval="T#20ms">
+            <pouInstance name="instance0" typeName="program0"/>
+          </task>
+        </resource>
+      </configuration>
+    </configurations>
+  </instances>
+</project>

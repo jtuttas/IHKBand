@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD9F734B-6BDD-4BF7-93BF-96DA983BB6A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>Sortieranlage</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>WindowsFormsApplication1.Program</StartupObject>
+    <ManifestCertificateThumbprint>265CD8857D7E4594A6692CB54F9046A83EED069C</ManifestCertificateThumbprint>
+    <ManifestKeyFile>IHKBand_3_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SignAssembly>false</SignAssembly>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://midlet.dyndns.org/Prozessmodelle/Sortieranlage/</InstallUrl>
+    <ProductName>virtuelles Aktorikmodell Sortieranlage</ProductName>
+    <PublisherName>Dr. Jörg Tuttas</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <DisallowUrlActivation>true</DisallowUrlActivation>
+    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Modbus">
+      <HintPath>..\lib\Modbus.dll</HintPath>
+    </Reference>
+    <Reference Include="Modbus.Extensions">
+      <HintPath>..\lib\Modbus.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unme.Common">
+      <HintPath>..\lib\Unme.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AktorikModell\Band.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AktorikModell\Basic2dObject.cs">
+      <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="AktorikModell\Basic2dObject.Designer.cs">
+      <DependentUpon>Basic2dObject.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alert.designer.cs">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AusgabeZuordnung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AusgabeZuordnung.Designer.cs">
+      <DependentUpon>AusgabeZuordnung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bedienelement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bedienelement.Designer.cs">
+      <DependentUpon>Bedienelement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BooleanItem.cs" />
+    <Compile Include="EigenschaftenBedienelemente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EigenschaftenBedienelemente.Designer.cs">
+      <DependentUpon>EigenschaftenBedienelemente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EigenschaftenDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EigenschaftenDialog.Designer.cs">
+      <DependentUpon>EigenschaftenDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EigenschaftenSegment7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EigenschaftenSegment7.Designer.cs">
+      <DependentUpon>EigenschaftenSegment7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AktorikModell\Holz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AktorikModell\InduktiverNaeherungsschalter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AktorikModell\KapazitiverNaeherungsschalter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AktorikModell\Magazin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AktorikModell\Material.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AktorikModell\Metall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AktorikModell\MovingObject.cs">
+      <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="AktorikModell\Kolben.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AktorikModell\Kolben.Designer.cs">
+      <DependentUpon>Kolben.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOServer.cs" />
+    <Compile Include="IOServerModbus.cs" />
+    <Compile Include="ModbusConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModbusConfig.Designer.cs">
+      <DependentUpon>ModbusConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Motor.cs" />
+    <Compile Include="NeuesProjekt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NeuesProjekt.designer.cs">
+      <DependentUpon>NeuesProjekt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotAus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotAus.Designer.cs">
+      <DependentUpon>NotAus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlcListener.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\Band.resx">
+      <DependentUpon>Band.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\Basic2dObject.resx">
+      <DependentUpon>Basic2dObject.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\InduktiverNaeherungsschalter.resx">
+      <DependentUpon>InduktiverNaeherungsschalter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\KapazitiverNaeherungsschalter.resx">
+      <DependentUpon>KapazitiverNaeherungsschalter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\Rutsche.resx">
+      <DependentUpon>Rutsche.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alert.resx">
+      <DependentUpon>Alert.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AusgabeZuordnung.resx">
+      <DependentUpon>AusgabeZuordnung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bedienelement.resx">
+      <DependentUpon>Bedienelement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EigenschaftenBedienelemente.resx">
+      <DependentUpon>EigenschaftenBedienelemente.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EigenschaftenDialog.resx">
+      <DependentUpon>EigenschaftenDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EigenschaftenSegment7.resx">
+      <DependentUpon>EigenschaftenSegment7.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\Holz.resx">
+      <DependentUpon>Holz.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\Magazin.resx">
+      <DependentUpon>Magazin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\Material.resx">
+      <DependentUpon>Material.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\Metall.resx">
+      <DependentUpon>Metall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\MovingObject.resx">
+      <DependentUpon>MovingObject.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\Kolben.resx">
+      <DependentUpon>Kolben.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModbusConfig.resx">
+      <DependentUpon>ModbusConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NeuesProjekt.resx">
+      <DependentUpon>NeuesProjekt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotAus.resx">
+      <DependentUpon>NotAus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktorikModell\Zylinder.resx">
+      <DependentUpon>Zylinder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Segment7.resx">
+      <DependentUpon>Segment7.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="IHKBand_3_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AktorikModell\Rutsche.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AktorikModell\Sensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AktorikModell\Zylinder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Segment7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Segment7.Designer.cs">
+      <DependentUpon>Segment7.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\Debug\default.eat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="default.eat" />
+    <None Include="IHKBand_1_TemporaryKey.pfx" />
+    <None Include="IHKBand_2_TemporaryKey.pfx" />
+    <None Include="IHKBand_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <Content Include="Resources\ausschalter.gif" />
+    <Content Include="Resources\ausschalterPressed.gif" />
+    <Content Include="Resources\band.gif" />
+    <None Include="bin\Debug\ausschalter.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\ausschalterPressed.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\band.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\band1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\band2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\band3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\band4.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\band5.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\band6.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\band7.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\band8.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\blindelement.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\einschalter.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\einschalterPressed.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\endschalter0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\endschalter1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\gelb0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\gelb0s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\gelb1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\gelb1s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\gruen0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\gruen0s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\gruen1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\gruen1s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_about.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_conect.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_eigenschaften.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_exit.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_laden.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_magazin.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_material.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_neu.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_neut.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_reset.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_save.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_sensor0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_sensor1gruen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_sensor1rot.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\icon_zylinder.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\Image0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\Image1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\Image2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\Image3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\Image4.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\Image5.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\Image6.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\kipp0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\kipp1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\kolben.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\led_0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\led_1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\magazin.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\pin.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\rot0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\rot0s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\rot1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\rot1s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\rutsche.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s10.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s11.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s12.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s13.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s14.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s15.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s4.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s5.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s6.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s7.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s8.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\s9.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\sensor0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\sensor1gruen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\sensor1rot.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\weiss0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\weiss0s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\weiss1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\weiss1s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\zylinder.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\holz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\metall.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Resources\band.jpg" />
+    <Content Include="Resources\blindelement.gif" />
+    <Content Include="Resources\default.eat" />
+    <Content Include="Resources\einschalter.gif" />
+    <Content Include="Resources\einschalterPressed.gif" />
+    <Content Include="Resources\endschalter0.gif" />
+    <Content Include="Resources\endschalter1.gif" />
+    <Content Include="Resources\gelb0.gif" />
+    <Content Include="Resources\gelb0s.gif" />
+    <Content Include="Resources\gelb1.gif" />
+    <Content Include="Resources\gelb1s.gif" />
+    <Content Include="Resources\gruen0.gif" />
+    <Content Include="Resources\gruen0s.gif" />
+    <Content Include="Resources\gruen1.gif" />
+    <Content Include="Resources\gruen1s.gif" />
+    <Content Include="Resources\holz.jpg" />
+    <Content Include="Resources\band1.gif" />
+    <Content Include="Resources\band2.gif" />
+    <Content Include="Resources\band3.gif" />
+    <Content Include="Resources\band4.gif" />
+    <Content Include="Resources\band5.gif" />
+    <Content Include="Resources\band6.gif" />
+    <Content Include="Resources\band7.gif" />
+    <Content Include="Resources\band8.gif" />
+    <Content Include="Resources\icon_about.gif" />
+    <Content Include="Resources\icon_conect.gif" />
+    <Content Include="Resources\icon_eigenschaften.gif" />
+    <Content Include="Resources\icon_exit.gif" />
+    <Content Include="Resources\icon_laden.gif" />
+    <Content Include="Resources\icon_magazin.gif" />
+    <Content Include="Resources\icon_material.gif" />
+    <Content Include="Resources\icon_neu.gif" />
+    <Content Include="Resources\icon_neut.gif" />
+    <Content Include="Resources\icon_reset.gif" />
+    <Content Include="Resources\icon_save.gif" />
+    <Content Include="Resources\icon_sensor0.gif" />
+    <Content Include="Resources\icon_sensor1gruen.gif" />
+    <Content Include="Resources\icon_sensor1rot.gif" />
+    <Content Include="Resources\icon_zylinder.gif" />
+    <Content Include="Resources\Image0.gif" />
+    <Content Include="Resources\Image1.gif" />
+    <Content Include="Resources\Image2.gif" />
+    <Content Include="Resources\Image3.gif" />
+    <Content Include="Resources\Image4.gif" />
+    <Content Include="Resources\Image5.gif" />
+    <Content Include="Resources\Image6.gif" />
+    <Content Include="Resources\led_0.gif" />
+    <Content Include="Resources\magazin.gif" />
+    <Content Include="Resources\led_1.gif" />
+    <Content Include="Resources\kolben.bmp" />
+    <Content Include="Resources\kolben.jpg" />
+    <Content Include="Resources\metall.jpg" />
+    <Content Include="Resources\pin.gif" />
+    <Content Include="Resources\rot0.gif" />
+    <Content Include="Resources\rot0s.gif" />
+    <Content Include="Resources\rot1.gif" />
+    <Content Include="Resources\rot1s.gif" />
+    <Content Include="Resources\rutsche.gif" />
+    <Content Include="Resources\s0.gif" />
+    <Content Include="Resources\s1.gif" />
+    <Content Include="Resources\s10.gif" />
+    <Content Include="Resources\s11.gif" />
+    <Content Include="Resources\s12.gif" />
+    <Content Include="Resources\s13.gif" />
+    <Content Include="Resources\s14.gif" />
+    <Content Include="Resources\s2.gif" />
+    <Content Include="Resources\s3.gif" />
+    <Content Include="Resources\s4.gif" />
+    <Content Include="Resources\s5.gif" />
+    <Content Include="Resources\s6.gif" />
+    <Content Include="Resources\s7.gif" />
+    <Content Include="Resources\s8.gif" />
+    <Content Include="Resources\kolben.gif" />
+    <Content Include="Resources\kipp0.gif" />
+    <Content Include="Resources\kipp1.gif" />
+    <Content Include="Resources\rutsche.jpg" />
+    <Content Include="Resources\weiss1.gif" />
+    <Content Include="Resources\s9.gif" />
+    <Content Include="Resources\s15.gif" />
+    <Content Include="Resources\sensor0.gif" />
+    <Content Include="Resources\sensor0.jpg" />
+    <Content Include="Resources\sensor1.jpg" />
+    <Content Include="Resources\sensor1gruen.gif" />
+    <Content Include="Resources\sensor1rot.gif" />
+    <Content Include="Resources\weiss0.gif" />
+    <Content Include="Resources\weiss0s.gif" />
+    <Content Include="Resources\weiss1s.gif" />
+    <Content Include="Resources\zylinder.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
