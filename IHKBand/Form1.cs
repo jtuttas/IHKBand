@@ -840,6 +840,10 @@ namespace WindowsFormsApplication1
                 {
                     this.Invoke(d, new object[] { null });
                 }
+                catch (System.ObjectDisposedException e)
+                {
+
+                }
                 catch (System.ComponentModel.InvalidAsynchronousStateException e)
                 {
 

@@ -21,8 +21,8 @@ namespace WindowsFormsApplication1
         TcpClient client;
         String ipadr="127.0.0.1";
         int ipport=502;
-        ushort offset=16;
-        ushort inputLength=48;
+        ushort offset=24;
+        ushort inputLength=40;
 
         /*
          * offset bildet den coil Offset und inputLenth die Anzahl der Ausgänge
@@ -85,7 +85,14 @@ namespace WindowsFormsApplication1
 
         public override void setBoolean(int byteadr, int bitadr, bool state)
         {
-            this.coil_output[byteadr*8+bitadr] = state;
+            try
+            {
+                this.coil_output[byteadr * 8 + bitadr] = state;
+            }
+            catch (IndexOutOfRangeException o)
+            {
+                Console.WriteLine("Fehler beim Schreiben von E" + byteadr + "." + bitadr);
+            }
         }
 
         // 1. Run the Write - Part on a Threadpool Thread ...

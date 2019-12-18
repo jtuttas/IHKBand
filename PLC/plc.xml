@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<project xmlns:ns1="http://www.plcopen.org/xml/tc6.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.plcopen.org/xml/tc6_0201">
+<project xmlns:ns1="http://www.plcopen.org/xml/tc6_0201" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unbekannt" productName="Unbenannt" productVersion="1" creationDateTime="2019-12-16T14:51:36"/>
-  <contentHeader name="Unbenannt" modificationDateTime="2019-12-16T15:39:37">
+  <contentHeader name="Unbenannt" modificationDateTime="2019-12-18T11:54:39">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -20,81 +20,269 @@
       <pou name="program0" pouType="program">
         <interface>
           <localVars>
-            <variable name="b5" address="%QX3.1">
-              <type>
-                <BOOL/>
-              </type>
-              <documentation>
-                <xhtml:p><![CDATA[Ind. Näherungsschalter]]></xhtml:p>
-              </documentation>
-            </variable>
             <variable name="b3" address="%QX3.0">
               <type>
                 <BOOL/>
               </type>
               <documentation>
-                <xhtml:p><![CDATA[Kap. Näherungsschalter]]></xhtml:p>
+                <xhtml:p><![CDATA[E0.0 Kap. Näherungsschalter]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="b5" address="%QX3.1">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E0.1 Ind. Näherungsschalter]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="m4_hinten" address="%QX3.2">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E0.2 Zylinder Endlage eingefahren]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="m4_vorne" address="%QX3.3">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E0.3 Zylinder Endlage ausgefahren  ]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="Notaus_Frei" address="%QX3.4">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E0.4 NotAus Freigabe  ]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="Notaus_quit" address="%QX3.5">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E0.5 NotAus Quittierung  ]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="s7" address="%QX3.6">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E0.6 Taster (Schließer) M4 einfahren ]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="s6" address="%QX3.7">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E0.7 Taster (Schließer) M4 ausfahren  ]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="s5" address="%QX4.0">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E1.0 Taster (Schließer) M1 Vorwärts     ]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="autom_stop" address="%QX4.1">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E1.1 Taster (Öffner) Automatik Stop]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="s4" address="%QX4.2">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E1.2 Taster (Schließer) Automatik Start]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="s2" address="%QX4.3">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E1.3 Schalter Hand / Aut.]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="quit_schutz0" address="%QX4.5">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E1.5 Taster (Schließer) Schutzeinr. Quittieren    ]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="k0" address="%QX4.6">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[E1.6 Schalter Anlage EIN]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="m1_rechts" address="%QX8.0">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[A0.0 Förderband nach rechts    ]]></xhtml:p>
               </documentation>
             </variable>
             <variable name="m1_links" address="%QX8.1">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A0.1 Förderband nach links]]></xhtml:p>
+              </documentation>
             </variable>
-            <variable name="m1_rechts" address="%QX8.0">
+            <variable name="m1_rechts_schnell" address="%QX8.2">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A0.2 Förderband 2. Drehzahl (schnell) rechts]]></xhtml:p>
+              </documentation>
             </variable>
-            <variable name="Notaus_Freigabe" address="%QX3.3">
+            <variable name="m1_links_schnell" address="%QX8.3">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A0.3 Förderband 2. Drehzahl (schnell) links ]]></xhtml:p>
+              </documentation>
             </variable>
-            <variable name="Notaus_Quittierung" address="%QX3.2">
+            <variable name="sm7" address="%QX8.4">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A0.4 Leuchtmelder M4 einfahren]]></xhtml:p>
+              </documentation>
             </variable>
-            <variable name="A_Zehner1" address="%QX10.4">
+            <variable name="sm6" address="%QX8.5">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A0.5 Leuchtmelder M4 ausfahren]]></xhtml:p>
+              </documentation>
             </variable>
-            <variable name="A_Zehner2" address="%QX10.5">
+            <variable name="lm_hand_ein" address="%QX8.6">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A0.6 Leuchtmelder Hand Ein]]></xhtml:p>
+              </documentation>
             </variable>
-            <variable name="A_Zehner3" address="%QX10.6">
+            <variable name="lm_autom_ein" address="%QX8.7">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A0.7 Leuchtmelder Automatik]]></xhtml:p>
+              </documentation>
             </variable>
-            <variable name="A_Zehner4" address="%QX10.7">
+            <variable name="m4_vor" address="%QX9.0">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A1.0 Zylinder einfahren ]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="m4_zurueck" address="%QX9.1">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[A1.1 Zylinder ausfahren]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="quit_schutz" address="%QX9.2">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[A1.2 Leuchtmelder Schutzeinr. Quittieren    ]]></xhtml:p>
+              </documentation>
             </variable>
             <variable name="A_Einer0" address="%QX10.0">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A2.0]]></xhtml:p>
+              </documentation>
             </variable>
             <variable name="A_Einer1" address="%QX10.1">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A2.1]]></xhtml:p>
+              </documentation>
             </variable>
             <variable name="A_Einer2" address="%QX10.2">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A2.2]]></xhtml:p>
+              </documentation>
             </variable>
             <variable name="A_Einer3" address="%QX10.3">
               <type>
                 <BOOL/>
               </type>
+              <documentation>
+                <xhtml:p><![CDATA[A2.3]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="A_Zehner1" address="%QX10.4">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[A2.4]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="A_Zehner2" address="%QX10.5">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[A2.5]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="A_Zehner3" address="%QX10.6">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[A2.6]]></xhtml:p>
+              </documentation>
+            </variable>
+            <variable name="A_Zehner4" address="%QX10.7">
+              <type>
+                <BOOL/>
+              </type>
+              <documentation>
+                <xhtml:p><![CDATA[A2.7]]></xhtml:p>
+              </documentation>
             </variable>
           </localVars>
         </interface>
@@ -118,6 +306,46 @@
               </connectionPointIn>
               <expression>m1_links</expression>
             </outVariable>
+            <outVariable localId="7" executionOrderId="0" height="30" width="100" negated="false">
+              <position x="380" y="120"/>
+              <connectionPointIn>
+                <relPosition x="0" y="20"/>
+                <connection refLocalId="9">
+                  <position x="380" y="140"/>
+                  <position x="305" y="140"/>
+                  <position x="305" y="130"/>
+                  <position x="230" y="130"/>
+                </connection>
+              </connectionPointIn>
+              <expression>m4_zurueck</expression>
+            </outVariable>
+            <outVariable localId="6" executionOrderId="0" height="30" width="60" negated="false">
+              <position x="380" y="170"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="8">
+                  <position x="380" y="180"/>
+                  <position x="300" y="180"/>
+                  <position x="300" y="200"/>
+                  <position x="220" y="200"/>
+                </connection>
+              </connectionPointIn>
+              <expression>m4_vor</expression>
+            </outVariable>
+            <inVariable localId="8" executionOrderId="0" height="30" width="30" negated="false">
+              <position x="190" y="180"/>
+              <connectionPointOut>
+                <relPosition x="30" y="20"/>
+              </connectionPointOut>
+              <expression>s6</expression>
+            </inVariable>
+            <inVariable localId="9" executionOrderId="0" height="30" width="30" negated="false">
+              <position x="200" y="110"/>
+              <connectionPointOut>
+                <relPosition x="30" y="20"/>
+              </connectionPointOut>
+              <expression>s7</expression>
+            </inVariable>
           </FBD>
         </body>
       </pou>

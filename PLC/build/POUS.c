@@ -201,20 +201,39 @@ __end:
 
 
 void PROGRAM0_init__(PROGRAM0 *data__, BOOL retain) {
-  __INIT_VAR(data__->B5,__BOOL_LITERAL(FALSE),retain)
   __INIT_VAR(data__->B3,__BOOL_LITERAL(FALSE),retain)
-  __INIT_VAR(data__->M1_LINKS,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->B5,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->M4_HINTEN,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->M4_VORNE,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->NOTAUS_FREI,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->NOTAUS_QUIT,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->S7,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->S6,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->S5,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->AUTOM_STOP,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->S4,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->S2,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->QUIT_SCHUTZ0,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->K0,__BOOL_LITERAL(FALSE),retain)
   __INIT_VAR(data__->M1_RECHTS,__BOOL_LITERAL(FALSE),retain)
-  __INIT_VAR(data__->NOTAUS_FREIGABE,__BOOL_LITERAL(FALSE),retain)
-  __INIT_VAR(data__->NOTAUS_QUITTIERUNG,__BOOL_LITERAL(FALSE),retain)
-  __INIT_VAR(data__->A_ZEHNER1,__BOOL_LITERAL(FALSE),retain)
-  __INIT_VAR(data__->A_ZEHNER2,__BOOL_LITERAL(FALSE),retain)
-  __INIT_VAR(data__->A_ZEHNER3,__BOOL_LITERAL(FALSE),retain)
-  __INIT_VAR(data__->A_ZEHNER4,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->M1_LINKS,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->M1_RECHTS_SCHNELL,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->M1_LINKS_SCHNELL,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->SM7,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->SM6,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->LM_HAND_EIN,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->LM_AUTOM_EIN,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->M4_VOR,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->M4_ZURUECK,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->QUIT_SCHUTZ,__BOOL_LITERAL(FALSE),retain)
   __INIT_VAR(data__->A_EINER0,__BOOL_LITERAL(FALSE),retain)
   __INIT_VAR(data__->A_EINER1,__BOOL_LITERAL(FALSE),retain)
   __INIT_VAR(data__->A_EINER2,__BOOL_LITERAL(FALSE),retain)
   __INIT_VAR(data__->A_EINER3,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->A_ZEHNER1,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->A_ZEHNER2,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->A_ZEHNER3,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->A_ZEHNER4,__BOOL_LITERAL(FALSE),retain)
 }
 
 // Code part
@@ -222,6 +241,8 @@ void PROGRAM0_body__(PROGRAM0 *data__) {
   // Initialise TEMP variables
 
   __SET_VAR(data__->,M1_LINKS,,__GET_VAR(data__->B5,));
+  __SET_VAR(data__->,M4_ZURUECK,,__GET_VAR(data__->S7,));
+  __SET_VAR(data__->,M4_VOR,,__GET_VAR(data__->S6,));
 
   goto __end;
 

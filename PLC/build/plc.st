@@ -94,23 +94,44 @@ END_FUNCTION_BLOCK
 
 PROGRAM program0
   VAR
-    b5 : BOOL;
     b3 : BOOL;
-    m1_links : BOOL;
+    b5 : BOOL;
+    m4_hinten : BOOL;
+    m4_vorne : BOOL;
+    Notaus_Frei : BOOL;
+    Notaus_quit : BOOL;
+    s7 : BOOL;
+    s6 : BOOL;
+    s5 : BOOL;
+    autom_stop : BOOL;
+    s4 : BOOL;
+    s2 : BOOL;
+    quit_schutz0 : BOOL;
+    k0 : BOOL;
     m1_rechts : BOOL;
-    Notaus_Freigabe : BOOL;
-    Notaus_Quittierung : BOOL;
-    A_Zehner1 : BOOL;
-    A_Zehner2 : BOOL;
-    A_Zehner3 : BOOL;
-    A_Zehner4 : BOOL;
+    m1_links : BOOL;
+    m1_rechts_schnell : BOOL;
+    m1_links_schnell : BOOL;
+    sm7 : BOOL;
+    sm6 : BOOL;
+    lm_hand_ein : BOOL;
+    lm_autom_ein : BOOL;
+    m4_vor : BOOL;
+    m4_zurueck : BOOL;
+    quit_schutz : BOOL;
     A_Einer0 : BOOL;
     A_Einer1 : BOOL;
     A_Einer2 : BOOL;
     A_Einer3 : BOOL;
+    A_Zehner1 : BOOL;
+    A_Zehner2 : BOOL;
+    A_Zehner3 : BOOL;
+    A_Zehner4 : BOOL;
   END_VAR
 
   m1_links := b5;
+  m4_zurueck := s7;
+  m4_vor := s6;
 END_PROGRAM
 
 

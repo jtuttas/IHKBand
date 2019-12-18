@@ -71,7 +71,7 @@
             this.coilOffsetTextBox.Name = "coilOffsetTextBox";
             this.coilOffsetTextBox.Size = new System.Drawing.Size(66, 31);
             this.coilOffsetTextBox.TabIndex = 4;
-            this.coilOffsetTextBox.Text = "16";
+            this.coilOffsetTextBox.Text = "24";
             // 
             // inputCoilTextBox
             // 
@@ -80,7 +80,7 @@
             this.inputCoilTextBox.Name = "inputCoilTextBox";
             this.inputCoilTextBox.Size = new System.Drawing.Size(66, 31);
             this.inputCoilTextBox.TabIndex = 5;
-            this.inputCoilTextBox.Text = "48";
+            this.inputCoilTextBox.Text = "40";
             // 
             // label1
             // 
