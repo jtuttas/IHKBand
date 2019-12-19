@@ -127,11 +127,31 @@ PROGRAM program0
     A_Zehner2 : BOOL;
     A_Zehner3 : BOOL;
     A_Zehner4 : BOOL;
+    TasterA : BOOL;
+    TasterB : BOOL;
+    LED_green : BOOL;
+    LED_red : BOOL;
+    LED_blue : BOOL;
+  END_VAR
+  VAR
+    NOT14_OUT : BOOL;
+    AND2_OUT : BOOL;
+    AND12_OUT : BOOL;
+    AND3_OUT : BOOL;
+    AND1_OUT : BOOL;
   END_VAR
 
-  m1_links := b5;
-  m4_zurueck := s7;
-  m4_vor := s6;
+  LED_green := s2;
+  NOT14_OUT := NOT(s2);
+  LED_red := NOT14_OUT;
+  AND2_OUT := AND(NOT(TasterA), NOT(s2));
+  m1_rechts := AND2_OUT;
+  AND12_OUT := AND(s7, NOT(s2));
+  m4_zurueck := AND12_OUT;
+  AND3_OUT := AND(NOT(TasterB), NOT(s2));
+  m1_links := AND3_OUT;
+  AND1_OUT := AND(s6, NOT(s2));
+  m4_vor := AND1_OUT;
 END_PROGRAM
 
 

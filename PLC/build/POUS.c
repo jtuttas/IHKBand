@@ -234,15 +234,53 @@ void PROGRAM0_init__(PROGRAM0 *data__, BOOL retain) {
   __INIT_VAR(data__->A_ZEHNER2,__BOOL_LITERAL(FALSE),retain)
   __INIT_VAR(data__->A_ZEHNER3,__BOOL_LITERAL(FALSE),retain)
   __INIT_VAR(data__->A_ZEHNER4,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->TASTERA,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->TASTERB,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->LED_GREEN,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->LED_RED,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->LED_BLUE,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->NOT14_OUT,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->AND2_OUT,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->AND12_OUT,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->AND3_OUT,__BOOL_LITERAL(FALSE),retain)
+  __INIT_VAR(data__->AND1_OUT,__BOOL_LITERAL(FALSE),retain)
 }
 
 // Code part
 void PROGRAM0_body__(PROGRAM0 *data__) {
   // Initialise TEMP variables
 
-  __SET_VAR(data__->,M1_LINKS,,__GET_VAR(data__->B5,));
-  __SET_VAR(data__->,M4_ZURUECK,,__GET_VAR(data__->S7,));
-  __SET_VAR(data__->,M4_VOR,,__GET_VAR(data__->S6,));
+  __SET_VAR(data__->,LED_GREEN,,__GET_VAR(data__->S2,));
+  __SET_VAR(data__->,NOT14_OUT,,!(__GET_VAR(data__->S2,)));
+  __SET_VAR(data__->,LED_RED,,__GET_VAR(data__->NOT14_OUT,));
+  __SET_VAR(data__->,AND2_OUT,,AND__BOOL__BOOL(
+    (BOOL)__BOOL_LITERAL(TRUE),
+    NULL,
+    (UINT)2,
+    (BOOL)!(__GET_VAR(data__->TASTERA,)),
+    (BOOL)!(__GET_VAR(data__->S2,))));
+  __SET_VAR(data__->,M1_RECHTS,,__GET_VAR(data__->AND2_OUT,));
+  __SET_VAR(data__->,AND12_OUT,,AND__BOOL__BOOL(
+    (BOOL)__BOOL_LITERAL(TRUE),
+    NULL,
+    (UINT)2,
+    (BOOL)__GET_VAR(data__->S7,),
+    (BOOL)!(__GET_VAR(data__->S2,))));
+  __SET_VAR(data__->,M4_ZURUECK,,__GET_VAR(data__->AND12_OUT,));
+  __SET_VAR(data__->,AND3_OUT,,AND__BOOL__BOOL(
+    (BOOL)__BOOL_LITERAL(TRUE),
+    NULL,
+    (UINT)2,
+    (BOOL)!(__GET_VAR(data__->TASTERB,)),
+    (BOOL)!(__GET_VAR(data__->S2,))));
+  __SET_VAR(data__->,M1_LINKS,,__GET_VAR(data__->AND3_OUT,));
+  __SET_VAR(data__->,AND1_OUT,,AND__BOOL__BOOL(
+    (BOOL)__BOOL_LITERAL(TRUE),
+    NULL,
+    (UINT)2,
+    (BOOL)__GET_VAR(data__->S6,),
+    (BOOL)!(__GET_VAR(data__->S2,))));
+  __SET_VAR(data__->,M4_VOR,,__GET_VAR(data__->AND1_OUT,));
 
   goto __end;
 

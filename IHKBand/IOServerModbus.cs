@@ -79,7 +79,14 @@ namespace WindowsFormsApplication1
         public override bool readBoolean(int byteadr, int bitadr)
         {
             //Console.WriteLine("Lese QX" + byteadr + "." + bitadr + " = " + coil_input[byteadr*8+bitadr]);
-            return coil_input[byteadr*8+bitadr];
+            if (connected)
+            {
+                return coil_input[byteadr * 8 + bitadr];
+            }
+            else
+            {
+                return false;
+            }
         }
 
 
