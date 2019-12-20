@@ -8,6 +8,7 @@ Die Anwendung kann als DotNet Anwendung hier geladen werden.
 
 ## Signalzuordnung
 Die Ein- und Ausgangssignale werden über Modbus Coils der Steuerung zugeordnet. Das Mapping kann über den Konfigurationsdialog eingestellt werden.
+
 ![config](Dok/config.png)
 
 - IPAdresse ist die IP Adresse der Steuerung
@@ -17,4 +18,6 @@ Die Ein- und Ausgangssignale werden über Modbus Coils der Steuerung zugeordnet.
 ![mapping](Dok/mapping.png) 
 
 ## Video
+
+[![Video1](http://img.youtube.com/vi/XKBg1DxUFII/0.jpg)](http://www.youtube.com/watch?v=XKBg1DxUFII)
 
