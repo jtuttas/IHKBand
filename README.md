@@ -4,7 +4,7 @@ Eine virtuelle Sortieranlage, die via Modbus an eine Steuerung gekoppelt werden 
 ![screenshot](Dok/screen1.png)
 
 ## Download
-Die Anwendung kann als DotNet Anwendung hier geladen werden.
+Die Anwendung kann als DotNet Anwendung **[hier](https://service.joerg-tuttas.de/IHKBand/publish.htm)** geladen werden.
 
 ## Signalzuordnung
 Die Ein- und Ausgangssignale werden über Modbus Coils der Steuerung zugeordnet. Das Mapping kann über den Konfigurationsdialog eingestellt werden.
