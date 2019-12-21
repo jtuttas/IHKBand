@@ -335,6 +335,7 @@
       <DependentUpon>Segment7.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
     <Content Include="Resources\band.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
