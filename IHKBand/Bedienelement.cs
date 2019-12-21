@@ -89,7 +89,8 @@ namespace WindowsFormsApplication1
                 this.pictureBox.Size = new System.Drawing.Size(this.pictureBox.Image.Width, this.pictureBox.Image.Height);
             }
             catch (Exception e) {
-                Console.WriteLine ("Exception bei Init Bedienelemente");
+                Console.WriteLine ("Exception bei Init Bedienelemente:"+e.Message);
+
             }
         }
 
