@@ -345,9 +345,15 @@
     <None Include="IHKBand_2_TemporaryKey.pfx" />
     <None Include="IHKBand_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
-    <Content Include="Resources\ausschalter.gif" />
-    <Content Include="Resources\ausschalterPressed.gif" />
-    <Content Include="Resources\band.gif" />
+    <Content Include="Resources\ausschalter.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ausschalterPressed.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\band.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="bin\Debug\ausschalter.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -600,94 +606,270 @@
     <None Include="bin\Debug\metall.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Content Include="Resources\band.jpg" />
-    <Content Include="Resources\blindelement.gif" />
-    <Content Include="Resources\default.eat" />
-    <Content Include="Resources\einschalter.gif" />
-    <Content Include="Resources\einschalterPressed.gif" />
-    <Content Include="Resources\endschalter0.gif" />
-    <Content Include="Resources\endschalter1.gif" />
-    <Content Include="Resources\gelb0.gif" />
-    <Content Include="Resources\gelb0s.gif" />
-    <Content Include="Resources\gelb1.gif" />
-    <Content Include="Resources\gelb1s.gif" />
-    <Content Include="Resources\gruen0.gif" />
-    <Content Include="Resources\gruen0s.gif" />
-    <Content Include="Resources\gruen1.gif" />
-    <Content Include="Resources\gruen1s.gif" />
-    <Content Include="Resources\holz.jpg" />
-    <Content Include="Resources\band1.gif" />
-    <Content Include="Resources\band2.gif" />
-    <Content Include="Resources\band3.gif" />
-    <Content Include="Resources\band4.gif" />
-    <Content Include="Resources\band5.gif" />
-    <Content Include="Resources\band6.gif" />
-    <Content Include="Resources\band7.gif" />
-    <Content Include="Resources\band8.gif" />
-    <Content Include="Resources\icon_about.gif" />
-    <Content Include="Resources\icon_conect.gif" />
-    <Content Include="Resources\icon_eigenschaften.gif" />
-    <Content Include="Resources\icon_exit.gif" />
-    <Content Include="Resources\icon_laden.gif" />
-    <Content Include="Resources\icon_magazin.gif" />
-    <Content Include="Resources\icon_material.gif" />
-    <Content Include="Resources\icon_neu.gif" />
-    <Content Include="Resources\icon_neut.gif" />
-    <Content Include="Resources\icon_reset.gif" />
-    <Content Include="Resources\icon_save.gif" />
-    <Content Include="Resources\icon_sensor0.gif" />
-    <Content Include="Resources\icon_sensor1gruen.gif" />
-    <Content Include="Resources\icon_sensor1rot.gif" />
-    <Content Include="Resources\icon_zylinder.gif" />
-    <Content Include="Resources\Image0.gif" />
-    <Content Include="Resources\Image1.gif" />
-    <Content Include="Resources\Image2.gif" />
-    <Content Include="Resources\Image3.gif" />
-    <Content Include="Resources\Image4.gif" />
-    <Content Include="Resources\Image5.gif" />
-    <Content Include="Resources\Image6.gif" />
-    <Content Include="Resources\led_0.gif" />
-    <Content Include="Resources\magazin.gif" />
-    <Content Include="Resources\led_1.gif" />
-    <Content Include="Resources\kolben.bmp" />
-    <Content Include="Resources\kolben.jpg" />
-    <Content Include="Resources\metall.jpg" />
-    <Content Include="Resources\pin.gif" />
-    <Content Include="Resources\rot0.gif" />
-    <Content Include="Resources\rot0s.gif" />
-    <Content Include="Resources\rot1.gif" />
-    <Content Include="Resources\rot1s.gif" />
-    <Content Include="Resources\rutsche.gif" />
-    <Content Include="Resources\s0.gif" />
-    <Content Include="Resources\s1.gif" />
-    <Content Include="Resources\s10.gif" />
-    <Content Include="Resources\s11.gif" />
-    <Content Include="Resources\s12.gif" />
-    <Content Include="Resources\s13.gif" />
-    <Content Include="Resources\s14.gif" />
-    <Content Include="Resources\s2.gif" />
-    <Content Include="Resources\s3.gif" />
-    <Content Include="Resources\s4.gif" />
-    <Content Include="Resources\s5.gif" />
-    <Content Include="Resources\s6.gif" />
-    <Content Include="Resources\s7.gif" />
-    <Content Include="Resources\s8.gif" />
-    <Content Include="Resources\kolben.gif" />
-    <Content Include="Resources\kipp0.gif" />
-    <Content Include="Resources\kipp1.gif" />
-    <Content Include="Resources\rutsche.jpg" />
-    <Content Include="Resources\weiss1.gif" />
-    <Content Include="Resources\s9.gif" />
-    <Content Include="Resources\s15.gif" />
-    <Content Include="Resources\sensor0.gif" />
-    <Content Include="Resources\sensor0.jpg" />
-    <Content Include="Resources\sensor1.jpg" />
-    <Content Include="Resources\sensor1gruen.gif" />
-    <Content Include="Resources\sensor1rot.gif" />
-    <Content Include="Resources\weiss0.gif" />
-    <Content Include="Resources\weiss0s.gif" />
-    <Content Include="Resources\weiss1s.gif" />
-    <Content Include="Resources\zylinder.gif" />
+    <Content Include="Resources\band.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\blindelement.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\default.eat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\einschalter.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\einschalterPressed.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\endschalter0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\endschalter1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gelb0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gelb0s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gelb1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gelb1s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gruen0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gruen0s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gruen1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gruen1s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\holz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\band1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\band2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\band3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\band4.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\band5.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\band6.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\band7.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\band8.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_about.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_conect.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_eigenschaften.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_exit.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_laden.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_magazin.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_material.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_neu.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_neut.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_reset.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_save.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_sensor0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_sensor1gruen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_sensor1rot.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icon_zylinder.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Image0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Image1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Image2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Image3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Image4.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Image5.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Image6.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\led_0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\magazin.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\led_1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\kolben.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\kolben.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\metall.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\pin.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\rot0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\rot0s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\rot1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\rot1s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\rutsche.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s10.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s11.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s12.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s13.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s14.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s4.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s5.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s6.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s7.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s8.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\kolben.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\kipp0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\kipp1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\rutsche.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\weiss1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s9.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\s15.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sensor0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sensor0.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sensor1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sensor1gruen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sensor1rot.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\weiss0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\weiss0s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\weiss1s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\zylinder.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
