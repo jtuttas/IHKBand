@@ -336,6 +336,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\ausschalter.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ausschalterPressed.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\band.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
