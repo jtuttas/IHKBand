@@ -41,9 +41,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(303, 216);
+            this.button1.Location = new System.Drawing.Point(152, 112);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 43);
+            this.button1.Size = new System.Drawing.Size(52, 22);
             this.button1.TabIndex = 0;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
@@ -51,52 +52,58 @@
             // 
             // ipTextBox
             // 
-            this.ipTextBox.Location = new System.Drawing.Point(189, 12);
+            this.ipTextBox.Location = new System.Drawing.Point(94, 6);
+            this.ipTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ipTextBox.Name = "ipTextBox";
-            this.ipTextBox.Size = new System.Drawing.Size(218, 31);
+            this.ipTextBox.Size = new System.Drawing.Size(111, 20);
             this.ipTextBox.TabIndex = 2;
             this.ipTextBox.Text = "127.0.0.1";
             // 
             // portTextBox
             // 
-            this.portTextBox.Location = new System.Drawing.Point(189, 49);
+            this.portTextBox.Location = new System.Drawing.Point(94, 25);
+            this.portTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.portTextBox.Name = "portTextBox";
-            this.portTextBox.Size = new System.Drawing.Size(66, 31);
+            this.portTextBox.Size = new System.Drawing.Size(35, 20);
             this.portTextBox.TabIndex = 3;
             this.portTextBox.Text = "502";
             // 
             // coilOffsetTextBox
             // 
-            this.coilOffsetTextBox.Location = new System.Drawing.Point(189, 86);
+            this.coilOffsetTextBox.Location = new System.Drawing.Point(94, 45);
+            this.coilOffsetTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.coilOffsetTextBox.Name = "coilOffsetTextBox";
-            this.coilOffsetTextBox.Size = new System.Drawing.Size(66, 31);
+            this.coilOffsetTextBox.Size = new System.Drawing.Size(35, 20);
             this.coilOffsetTextBox.TabIndex = 4;
             this.coilOffsetTextBox.Text = "24";
             // 
             // inputCoilTextBox
             // 
             this.inputCoilTextBox.Enabled = false;
-            this.inputCoilTextBox.Location = new System.Drawing.Point(189, 123);
+            this.inputCoilTextBox.Location = new System.Drawing.Point(94, 64);
+            this.inputCoilTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.inputCoilTextBox.Name = "inputCoilTextBox";
-            this.inputCoilTextBox.Size = new System.Drawing.Size(66, 31);
+            this.inputCoilTextBox.Size = new System.Drawing.Size(35, 20);
             this.inputCoilTextBox.TabIndex = 5;
             this.inputCoilTextBox.Text = "40";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 15);
+            this.label1.Location = new System.Drawing.Point(34, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 25);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "IP Adresse";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(132, 52);
+            this.label2.Location = new System.Drawing.Point(66, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 25);
+            this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Port";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -104,9 +111,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(67, 89);
+            this.label3.Location = new System.Drawing.Point(34, 46);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Coil Offset";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -114,18 +122,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(70, 126);
+            this.label4.Location = new System.Drawing.Point(35, 66);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 25);
+            this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Input Coils";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ModbusConfig
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 271);
+            this.ClientSize = new System.Drawing.Size(210, 141);
             this.ControlBox = false;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -136,6 +145,7 @@
             this.Controls.Add(this.portTextBox);
             this.Controls.Add(this.ipTextBox);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ModbusConfig";

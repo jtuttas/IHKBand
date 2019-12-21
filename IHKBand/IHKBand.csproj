@@ -492,6 +492,12 @@
     <Content Include="Resources\metall.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\notaus0.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\notaus1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\pin.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
