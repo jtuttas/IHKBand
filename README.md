@@ -15,6 +15,7 @@ Die Ein- und Ausgangssignale werden über Modbus Coils der Steuerung zugeordnet.
 - Port die Portnummer (default 502)
 - Coil Offset, wird zum ersten Eingangssignal hinzu addiert (default 24)
 - Anzahl der Eingänge. Entspricht auch die Anzahl der Ausgänge. Default ist 40.
+
 ![mapping](Dok/mapping.png) 
 
 ## Video
